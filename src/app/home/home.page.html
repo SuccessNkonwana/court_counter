@@ -1,14 +1,102 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="medium">
     <ion-title>
-      Ionic Blank
+      Court counter
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+  <ion-grid>
+     
+  
+    
+    <ion-row>
+      <ion-col size="6" id="a">
+          <ion-row>
+              <ion-col id="a1">
+              TEAM A<br><br>
+              <span>{{teamA}}</span>
+              <br><br>
+            </ion-col>
+          </ion-row>
+        <ion-row>
+          <ion-col (click)="subA(4)" >
+              -4
+          </ion-col>
+          <ion-col (click)="addA(4)">
+            +4
+          </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col (click)="subA(3)">
+              -3
+            </ion-col>
+            <ion-col (click)="addA(3)">
+              +3
+            </ion-col>
+          </ion-row>
+          <ion-row>
+              <ion-col (click)="subA(2)">
+                -2
+              </ion-col>
+              <ion-col (click)="addA(2)">
+                +2
+              </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col (click)="subA(1)">
+                  -1
+                </ion-col>
+                <ion-col (click)="addA(1)">
+                  +1
+                </ion-col>
+              </ion-row>
+      </ion-col>
+      <ion-col size="6" id="b">
+          <ion-row>
+              <ion-col id="b1">
+              TEAM B<br><br>
+              <span >{{teamB}}</span>
+              <br><br>
+            </ion-col>
+          </ion-row>
+        <ion-row>
+          <ion-col (click)="subB(4)">
+            -4
+          </ion-col>
+          <ion-col (click)="addB(4)">
+            +4
+          </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col (click)="subB(3)">
+              -3
+            </ion-col>
+            <ion-col (click)="addB(3)">
+              +3
+            </ion-col>
+          </ion-row>
+          <ion-row>
+              <ion-col (click)="subB(2)">
+                -2
+              </ion-col>
+              <ion-col (click)="addB(2)">
+                +2
+              </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col (click)="subB(1)">
+                  -1
+                </ion-col>
+                <ion-col (click)="addB(1)">
+                  +1
+                </ion-col>
+              </ion-row>
+      </ion-col>
+    </ion-row>
+   
+    
+  </ion-grid>
+  <ion-button  (click)="reset()" color="medium">Reset</ion-button>
 </ion-content>
