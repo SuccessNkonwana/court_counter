@@ -12,9 +12,22 @@ export class HomePage {
     this.teamA=this.teamA+num;
     
 }
+
+// if(this.state.counter < 0){
+//   this.setState({
+//       counter:0
+//   });
+// }else {
+//   this.setState({
+//       counter: this.state.counter - 1
+//   });
+// }
+
 subA(num:number) {
   this.teamA=this.teamA-num;
-  
+  if(this.teamA<0){
+    this.teamA=0;
+}
 }
 
 //Team B
@@ -25,7 +38,9 @@ teamB:number=0;
 }
 subB(num:number) {
   this.teamB=this.teamB-num;
-  
+  if(this.teamB<0){
+    this.teamB=0;
+}
 }
 
 //reset button
